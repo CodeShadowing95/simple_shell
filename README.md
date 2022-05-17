@@ -1,3 +1,40 @@
-Building our own Shell
-
-This shell will practically work like a normal shell but with our own customization
+<h1>Simple Shell</h1>
+<hr>
+A Unix Shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. The shell is both an interactive command language and a scripting language, and is used by the operating system to control the execution of the system using shell scripts.<br>
+<br>
+<hr>
+<h2>Features of the simple shell</h2>
+<ul>
+<li>Display a prompt and wait for the user to type a command. A command line always ends with a new line.</li>
+<li>The prompt is displayed again each time a command has been executed.</li>
+<li>The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.</li>
+<li>The command lines are made only of one word. No arguments will be passed to programs.</li>
+<li>If an executable cannot be found, print an error message and display the prompt again.</li>
+<li>Handle errors.</li>
+<li>You have to handle the “end of file” condition (Ctrl+D)</li>
+<li>Handle command lines with arguments</li>
+</ul>
+<br>
+<hr>
+<h2>Compilation</h2>
+The shell will be compiled this following way:
+<code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c -o hsh</code>
+<br>
+<hr>
+<h2>Usage</h2>
+The shell should work like in interactive mode
+<code>$ ./hsh | /bin/ls | hsh main.c shell.c | ($) | exit</code><br>
+Also in non-interactive mode<br>
+<code>
+$ echo "/bin/ls" | ./hsh<br>
+hsh main.c shell.c test_ls_2<br>
+$<br>
+$ cat test_ls_2<br>
+/bin/ls<br>
+/bin/ls<br>
+$<br>
+$ cat test_ls_2 | ./hsh<br>
+hsh main.c shell.c test_ls_2<br>
+hsh main.c shell.c test_ls_2<br>
+$
+</code>
