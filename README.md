@@ -1,8 +1,6 @@
 <h1>Simple Shell</h1>
-<hr>
-A Unix Shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. The shell is both an interactive command language and a scripting language, and is used by the operating system to control the execution of the system using shell scripts.<br>
-<br>
-<hr>
+A Unix Shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. The shell is both an interactive command language and a scripting language, and is used by the operating system to control the execution of the system using shell scripts.
+
 <h2>Features of the simple shell</h2>
 <ul>
 <li>Display a prompt and wait for the user to type a command. A command line always ends with a new line.</li>
@@ -14,27 +12,31 @@ A Unix Shell is a command-line interpreter or shell that provides a command line
 <li>You have to handle the “end of file” condition (Ctrl+D)</li>
 <li>Handle command lines with arguments</li>
 </ul>
-<br>
-<hr>
+
 <h2>Compilation</h2>
-The shell will be compiled this following way:
+<p>The shell will be compiled this following way:</p>
 <code>gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c -o hsh</code>
-<br>
-<hr>
+
 <h2>Usage</h2>
-The shell should work like in interactive mode
-<code>$ ./hsh | /bin/ls | hsh main.c shell.c | ($) | exit</code><br>
-Also in non-interactive mode<br>
+<p>The shell should work like in interactive mode</p>
+<code>$ ./hsh | /bin/ls | hsh main.c shell.c | ($) | exit</code>
+<p>Also in non-interactive mode</p>
 <code>
-$ echo "/bin/ls" | ./hsh<br>
-hsh main.c shell.c test_ls_2<br>
-$<br>
-$ cat test_ls_2<br>
-/bin/ls<br>
-/bin/ls<br>
-$<br>
-$ cat test_ls_2 | ./hsh<br>
-hsh main.c shell.c test_ls_2<br>
-hsh main.c shell.c test_ls_2<br>
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
 $
 </code>
+
+<h2>Contributors</h2>
+<ul>
+<li>MBOUME NAMEGNI Frank Patrick</li>
+<li>ZUNAÏD Ali</li>
+</ul>
